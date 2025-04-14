@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/layout/header";
 
 // Helvetica Now Text (local font)
 const helveticaNowText = localFont({
@@ -43,6 +44,7 @@ export default function RootLayout({
   return (
     <html lang="da">
       <body className={`${helveticaNowText.variable} font-sans antialiased`}>
+        <Header />
         {children}
       </body>
     </html>
