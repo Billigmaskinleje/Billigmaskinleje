@@ -4,10 +4,39 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+@theme {
+  --color-primary: #fff877;
+}
 
 @layer base {
   .custom_container {
-    max-width: 1728px;
+    @apply max-w-[1728px] mx-auto w-full px-5 sm:px-10 lg:px-20 xl:px-[134px];
+  }
+
+  .heading_secondary {
+    @apply text-4xl sm:text-6xl lg:text-[90px] lg:leading-normal;
+  }
+
+  .text-75 {
+    @apply text-5xl leading-[60px] sm:text-[75px] sm:leading-[86px];
+  }
+  .text-60 {
+    @apply text-4xl leading-[60px] sm:text-6xl sm:leading-[80px];
+  }
+  .text-35 {
+    @apply text-2xl sm:text-[35px] leading-normal;
+  }
+  .text-40 {
+    @apply text-3xl sm:text-[40px];
+  }
+  .text-30 {
+    @apply text-2xl sm:text-3xl sm:leading-[38px];
+  }
+  .text-20 {
+    @apply text-lg sm:text-xl tracking-[1.8px] sm:leading-[38px];
+  }
+  .text-15 {
+    @apply text-[15px] tracking-[1.35px];
   }
 }
 
@@ -19,12 +48,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: white;
+    --foreground: white;
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: white;
 }
