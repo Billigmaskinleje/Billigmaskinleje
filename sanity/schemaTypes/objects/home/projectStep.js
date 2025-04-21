@@ -6,6 +6,12 @@ export default defineType({
   type: 'object',
   fields: [
     defineField({
+      name: 'step',
+      title: 'Step',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'title',
       title: 'Step Title',
       type: 'string',
@@ -16,21 +22,16 @@ export default defineType({
       title: 'Step Description',
       type: 'text',
     }),
-    defineField({
-      name: 'icon',
-      title: 'Step Icon',
-      type: 'figure',
-    }),
   ],
   preview: {
     select: {
       title: 'title',
-      media: 'icon',
+      step: 'step',
     },
-    prepare({title, media}) {
+    prepare({title, step}) {
       return {
         title,
-        media,
+        subtitle: step,
       }
     },
   },

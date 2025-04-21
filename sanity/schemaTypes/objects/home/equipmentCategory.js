@@ -20,7 +20,7 @@ export default defineType({
     defineField({
       name: 'link',
       title: 'Category Link',
-      type: 'link',
+      type: 'slug',
     }),
   ],
   preview: {

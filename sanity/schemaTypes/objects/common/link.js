@@ -19,6 +19,19 @@ export default defineType({
       },
     }),
     defineField({
+      title: 'Button Type',
+      name: 'btnType',
+      type: 'string',
+      initialValue: 'solid',
+      description: 'If there is no type selected then button hide on frontend',
+      options: {
+        list: [
+          {title: 'Solid', value: 'solid'},
+          {title: 'Outline', value: 'outline'},
+        ],
+      },
+    }),
+    defineField({
       name: 'label',
       type: 'string',
       title: 'Label',

@@ -39,6 +39,15 @@ export default defineType({
         collapsed: true,
       },
     }),
+    defineField({
+      name: 'button2',
+      title: 'Button 2',
+      type: 'link',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      },
+    }),
   ],
   preview: {
     select: {

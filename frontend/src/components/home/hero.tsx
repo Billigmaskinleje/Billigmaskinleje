@@ -1,10 +1,23 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import TrustpilotReview from "@/components/reviews/TrustpilotReview";
 import GoogleReview from "@/components/reviews/GoogleReview";
+import { IButton, IImage } from "@/types/common";
+import Button from "../common/button";
 
-const Hero = () => {
+interface IHomeHero {
+  title: string;
+  subtitle: string;
+  backgroundImage: IImage;
+  button: IButton;
+  button2: IButton;
+}
+
+interface IHomeHeroProps {
+  data: IHomeHero;
+}
+
+const Hero = ({ data }: IHomeHeroProps) => {
   return (
     <section className="relative min-h-screen">
       {/* Background Image with Gradient Overlay */}
@@ -12,8 +25,8 @@ const Hero = () => {
         {/* Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-excavator.png"
-            alt="Billigmaskinleje equipment"
+            src={data.backgroundImage.asset.url}
+            alt={data.backgroundImage.alt || data.title}
             fill
             priority
             className="object-cover"
@@ -35,29 +48,18 @@ const Hero = () => {
         <div className="">
           {/* Main Heading */}
           <h1 className="max-w-[621px] text-75 font-black mb-8">
-            Lej maskiner nemt og hurtigt på sjælland
+            {data.title}
           </h1>
 
           {/* Subheading */}
           <p className="max-w-[562px] text-30 mb-6 font-normal">
-            Maskinudlejning til private og professionelle. Leje fra én dag til
-            flere uger.
+            {data.subtitle}
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 mb-16">
-            <Link
-              href="/lej"
-              className="bg-[#FFFF8D] text-black py-3 px-8 text-base font-bold rounded-sm uppercase hover:bg-yellow-200 transition-colors inline-block"
-            >
-              Lej en maskine
-            </Link>
-            <Link
-              href="/langtidsleje"
-              className="border border-white py-3 px-8 text-base font-bold rounded-sm uppercase hover:bg-white/10 transition-colors inline-block"
-            >
-              Langtidsleje
-            </Link>
+            {data.button.label && <Button button={data.button} />}
+            {data.button2.label && <Button button={data.button2} />}
           </div>
 
           {/* Review Badges */}

@@ -50,10 +50,30 @@ export default defineType({
         collapsed: true,
       },
     }),
+
     defineField({
       name: 'pricingExamples',
       title: 'Pricing Examples Section',
       type: 'homePricingExamples',
+      options: {
+        collapsable: true,
+        collapsed: true,
+      },
+    }),
+    defineField({
+      name: 'homeReviews',
+      title: 'Home Reviews',
+      type: 'homeReviews',
+      options: {
+        collapsable: true,
+        collapsed: true,
+      },
+    }),
+
+    defineField({
+      name: 'faq',
+      title: 'FAQ Section',
+      type: 'homeFaq',
       options: {
         collapsable: true,
         collapsed: true,
@@ -69,9 +89,9 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'faq',
-      title: 'FAQ Section',
-      type: 'homeFaq',
+      name: 'paymentMethods',
+      title: 'Payment Methods',
+      type: 'paymentMethods',
       options: {
         collapsable: true,
         collapsed: true,

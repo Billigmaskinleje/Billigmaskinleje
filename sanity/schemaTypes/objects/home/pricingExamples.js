@@ -16,20 +16,24 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'subtitle',
-      title: 'Subtitle',
-      type: 'string',
+      name: 'dailyPrice',
+      title: 'Daily Pricing',
+      type: 'table',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'priceItems',
-      title: 'Price Items',
-      type: 'array',
-      of: [
-        {
-          type: 'priceItem',
-        },
-      ],
+      name: 'weeklyPrice',
+      title: 'Weekly Pricing',
+      type: 'table',
+      validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: 'monthlyPrice',
+      title: 'Monthly Pricing',
+      type: 'table',
+      validation: (Rule) => Rule.required(),
+    }),
+
     defineField({
       name: 'button',
       title: 'Button',

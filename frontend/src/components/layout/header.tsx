@@ -27,31 +27,31 @@ const Header = () => {
             <nav className="hidden md:flex items-center space-x-4">
               <Link
                 href="/maskiner"
-                className="text-white hover:text-gray-200 uppercase text-sm font-bold"
+                className="text-white hover:text-gray-200 uppercase text-sm font-normal tracking-[1.35px]"
               >
                 Maskiner
               </Link>
               <Link
                 href="/priser"
-                className="text-white hover:text-gray-200 uppercase text-sm font-bold"
+                className="text-white hover:text-gray-200 uppercase text-sm font-normal tracking-[1.35px]"
               >
                 Priser
               </Link>
               <Link
                 href="/hvordan-fungerer-det"
-                className="text-white hover:text-gray-200 uppercase text-sm font-bold"
+                className="text-white hover:text-gray-200 uppercase text-sm font-normal tracking-[1.35px]"
               >
                 Hvordan Fungerer Det?
               </Link>
               <Link
                 href="/gravearbejde"
-                className="text-white hover:text-gray-200 uppercase text-sm font-bold"
+                className="text-white hover:text-gray-200 uppercase text-sm font-normal tracking-[1.35px]"
               >
                 Gravearbejde
               </Link>
               <Link
                 href="/langtidsleje"
-                className="text-white hover:text-gray-200 uppercase text-sm font-bold"
+                className="text-white hover:text-gray-200 uppercase text-sm font-normal tracking-[1.35px]"
               >
                 Langtidsleje
               </Link>
@@ -61,13 +61,13 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-10">
             <Link
               href="/kontakt"
-              className="text-white hover:text-gray-200 uppercase text-sm font-bold"
+              className="text-white hover:text-gray-200 uppercase text-sm font-normal tracking-[1.35px]"
             >
               Kontakt
             </Link>
             <Link
               href="/lej"
-              className="bg-white text-black py-1.5 px-4 uppercase rounded-sm text-sm font-bold hover:bg-gray-100 transition-colors"
+              className="bg-white text-black py-1.5 px-4 uppercase rounded-sm text-sm font-normal tracking-[1.35px] hover:bg-gray-100 transition-colors"
             >
               Lejen Maskine
             </Link>

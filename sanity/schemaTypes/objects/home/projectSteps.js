@@ -16,6 +16,11 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'subtitle',
+      title: 'Sub Title',
+      type: 'string',
+    }),
+    defineField({
       name: 'steps',
       title: 'Project Steps',
       type: 'array',

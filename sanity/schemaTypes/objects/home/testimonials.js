@@ -10,34 +10,33 @@ export default defineType({
   },
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
+      name: 'feedback',
+      title: 'Feedback',
+      type: 'text',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'reviewerName',
+      title: 'Reviewer Name',
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'testimonials',
-      title: 'Testimonials',
-      type: 'array',
-      of: [
-        {
-          type: 'testimonial',
-        },
-      ],
-      options: {
-        collapsible: true,
-        collapsed: true,
-      },
+      name: 'designation',
+      title: 'Designation',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
     }),
   ],
   preview: {
     select: {
-      title: 'title',
+      title: 'feedback',
+      subtitle: 'feedback',
     },
-    prepare({title}) {
+    prepare({title, subtitle}) {
       return {
-        title: 'Testimonials Section',
-        subtitle: title,
+        title: title,
+        subtitle: subtitle,
       }
     },
   },

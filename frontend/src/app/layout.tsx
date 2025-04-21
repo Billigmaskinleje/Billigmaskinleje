@@ -8,22 +8,67 @@ import Footer from "@/components/layout/footer";
 const helveticaNowText = localFont({
   src: [
     {
-      path: "../../public/font/helveticanowtext-bold-demo.ttf",
+      path: "../../public/font/HelveticaNowDisplay-Thin.ttf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/HelveticaNowDisplay-ThinIta.ttf",
+      weight: "200",
+      style: "italic",
+    },
+    {
+      path: "../../public/font/HelveticaNowDisplay-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/HelveticaNowDisplay-LightIta.ttf",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "../../public/font/HelveticaNowDisplay-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/HelveticaNowDisplay-RegIta.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../public/font/HelveticaNowDisplay-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/HelveticaNowDisplay-MedIta.ttf",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "../../public/font/HelveticaNowDisplay-Bold.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../../public/font/helveticanowtext-bolditalic-demo.ttf",
+      path: "../../public/font/HelveticaNowDisplay-BoldIta.ttf",
       weight: "700",
       style: "italic",
     },
     {
-      path: "../../public/font/helveticanowtext-black-demo.ttf",
+      path: "../../public/font/HelveticaNowDisplay-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/HelveticaNowDisplay-Black.ttf",
       weight: "900",
       style: "normal",
     },
     {
-      path: "../../public/font/helveticanowtext-blackitalic-demo.ttf",
+      path: "../../public/font/HelveticaNowDisplay-BlackIta.ttf",
       weight: "900",
       style: "italic",
     },

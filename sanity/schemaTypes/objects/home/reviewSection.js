@@ -1,8 +1,8 @@
 import {defineType, defineField} from 'sanity'
 
 export default defineType({
-  name: 'homeFaq',
-  title: 'FAQ Section',
+  name: 'homeReviews',
+  title: 'Reviews Section',
   type: 'object',
   options: {
     collapsible: true,
@@ -19,26 +19,7 @@ export default defineType({
       name: 'description',
       title: 'Description',
       type: 'editor',
-    }),
-    defineField({
-      name: 'image',
-      title: 'Image',
-      type: 'figure',
-      options: {
-        collapsible: true,
-        collapsed: true,
-      },
-    }),
-    defineField({
-      name: 'faqItems',
-      title: 'FAQ Items',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: [{type: 'faq'}],
-        },
-      ],
+      validation: (Rule) => Rule.required(),
     }),
   ],
   preview: {
@@ -47,8 +28,7 @@ export default defineType({
     },
     prepare({title}) {
       return {
-        title: 'FAQ Section',
-        subtitle: title,
+        title: title,
       }
     },
   },

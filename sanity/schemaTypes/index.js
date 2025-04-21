@@ -13,6 +13,8 @@ import homeProjectSteps from './objects/home/projectSteps'
 import homePricingExamples from './objects/home/pricingExamples'
 import homeTestimonials from './objects/home/testimonials'
 import homeFaq from './objects/home/faq'
+import reviewSection from './objects/home/reviewSection'
+import paymentMethods from './objects/home/paymentMethods'
 
 // Home Page Sub-Objects
 import equipmentCategory from './objects/home/equipmentCategory'
@@ -44,6 +46,8 @@ export const schemaTypes = [
   homePricingExamples,
   homeTestimonials,
   homeFaq,
+  reviewSection,
+  paymentMethods,
 
   // Home Page Sub-Objects
   equipmentCategory,
