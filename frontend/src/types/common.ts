@@ -1,3 +1,5 @@
+import { UnknownNodeType } from "@portabletext/react";
+
 export interface IImage {
   alt: string | null;
   asset: {
@@ -21,4 +23,10 @@ export interface IButton {
     current: string;
   };
   url: string;
+}
+
+export interface IFAQ {
+  _key: string;
+  question: string;
+  answerRaw: UnknownNodeType | UnknownNodeType[];
 }

@@ -33,7 +33,10 @@ const EquipmentRental = ({ data }: { data: IEquipmentRental }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-[108px]">
           {data.categories.map((category, key) => (
-            <div className="flex flex-col max-w-[400px]" key={key}>
+            <div
+              className="flex flex-col mx-auto w-full max-w-[400px]"
+              key={key}
+            >
               <div className="bg-white aspect-[4/3] px-[46px] pt-[46px] pb-[22px] rounded-[25px]">
                 <div className="relative w-full h-full">
                   <Image
