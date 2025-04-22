@@ -1,21 +1,12 @@
 import React from "react";
+import { IStep } from ".";
 
-interface StepCardProps {
-  stepNumber: number;
-  title: string;
-  description: string;
-}
-
-const StepCard: React.FC<StepCardProps> = ({
-  stepNumber,
-  title,
-  description,
-}) => {
+const StepCard: React.FC<IStep> = ({ step, title, description }) => {
   return (
-    <div className="bg-gray-100 rounded-lg px-[30px] pt-[30px] pb-[70px]">
+    <div className="bg-gray-100 rounded-[25px] px-[30px] pt-[30px] pb-[70px]">
       {/* Step Number Badge */}
       <div className="bg-black text-white inline-flex items-center justify-center rounded-full h-10 px-4">
-        <span className="text-15 font-medium uppercase">Step {stepNumber}</span>
+        <span className="text-15 font-medium uppercase">{step}</span>
       </div>
 
       {/* Card Title */}
