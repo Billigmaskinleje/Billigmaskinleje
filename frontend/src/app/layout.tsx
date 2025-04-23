@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import { getSettingData } from "@/queries/settings";
 
 // Helvetica Now Text (local font)
 const helveticaNowText = localFont({
@@ -82,17 +83,18 @@ export const metadata: Metadata = {
   description: "Din pålidelige partner for maskinleje i Danmark",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const data = await getSettingData();
   return (
     <html lang="da">
       <body className={`${helveticaNowText.variable} font-sans antialiased`}>
-        <Header />
+        <Header data={data.header} />
         {children}
-        <Footer />
+        <Footer data={data.footer} />
       </body>
     </html>
   );

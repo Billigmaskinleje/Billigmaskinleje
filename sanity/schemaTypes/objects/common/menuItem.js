@@ -1,9 +1,9 @@
 import {defineType, defineField} from 'sanity'
 
 export default defineType({
-  name: 'link',
+  name: 'menuItem',
   type: 'object',
-  title: 'Link',
+  title: 'Menu Item',
   fields: [
     defineField({
       title: 'Type',
@@ -18,18 +18,7 @@ export default defineType({
         ],
       },
     }),
-    defineField({
-      title: 'Button Type',
-      name: 'btnType',
-      type: 'string',
-      initialValue: 'solid',
-      options: {
-        list: [
-          {title: 'Solid', value: 'solid'},
-          {title: 'Outline', value: 'outline'},
-        ],
-      },
-    }),
+
     defineField({
       name: 'label',
       type: 'string',

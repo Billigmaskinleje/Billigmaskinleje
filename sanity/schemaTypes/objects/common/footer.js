@@ -12,7 +12,7 @@ export default {
     {
       name: 'menu',
       type: 'array',
-      of: [{type: 'link'}],
+      of: [{type: 'menuItem'}],
       title: 'Footer Menu',
       validation: (rule) => rule.required(),
     },

@@ -29,6 +29,7 @@ import editor from './objects/common/editor'
 import header from './objects/common/header'
 import footer from './objects/common/footer'
 import seo from './objects/common/seo'
+import menuItem from './objects/common/menuItem'
 
 export const schemaTypes = [
   // Pages
@@ -62,4 +63,5 @@ export const schemaTypes = [
   header,
   footer,
   seo,
+  menuItem,
 ]

@@ -1,51 +1,61 @@
 import React from "react";
 import Link from "next/link";
+import { IButton, LinkType } from "@/types/common";
+import { slug } from "@/utils/slug";
+import Button from "../common/button";
 
-const Footer = () => {
+interface IFooter {
+  title: string;
+  cvr: string;
+  caption: string;
+  menu: Omit<IButton, "btnType">[];
+  button: IButton;
+}
+
+interface FooterProps {
+  data: IFooter;
+}
+const Footer = ({ data }: FooterProps) => {
   return (
     <footer className="bg-primary pt-[300px] pb-[90px] text-black">
       <div className="custom_container">
         <div className="flex flex-col">
           {/* Main heading (Phone number) */}
           <h2 className="heading_secondary font-normal mb-[130px]">
-            Ring til os på 20716046
+            {data.title}
           </h2>
 
           {/* Navigation links */}
           <div className="mb-[94px]">
             <ul className="flex flex-col space-y-6">
-              <li>
-                <Link href="/maskiner" className="uppercase text-black text-15">
-                  VORES MASKINER
-                </Link>
-              </li>
-              <li>
-                <Link href="/katalog" className="uppercase text-black text-15">
-                  KATALOG
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/hvordan-fungerer-det"
-                  className="uppercase text-black text-15"
-                >
-                  HVORDAN FUNGERER DET?
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/gravearbejde"
-                  className="uppercase text-black text-15"
-                >
-                  GRAVEARBEJDE
-                </Link>
-              </li>
+              {data.menu.map((link, key) =>
+                link.type === LinkType.EXTERNAL ? (
+                  <li key={key}>
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      className="uppercase text-black text-15"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ) : (
+                  <li key={key}>
+                    <Link
+                      href={slug(link.slug.current)}
+                      className="uppercase text-black text-15"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
           {/* Company info */}
           <div className="mb-16">
-            <p className="text-35 font-normal">CVR: 33382235</p>
+            <p className="text-35 font-normal">{data.cvr}</p>
           </div>
 
           {/* Company name and CTA */}
@@ -53,18 +63,18 @@ const Footer = () => {
             {/* Company name - left on all screens */}
             <div className="w-full md:w-1/2 lg:w-1/3 mb-8 md:mb-0">
               <p className="font-black text-20 uppercase text-left">
-                BILLIGMASKINLEJE APS
+                {data.caption}
               </p>
             </div>
 
             {/* Button - centered on desktop, right on tablet, bottom on mobile */}
             <div className="w-full md:w-1/2 lg:w-1/3 flex md:justify-end lg:justify-center">
-              <Link
-                href="/lej"
-                className="inline-block border border-black py-2 px-8 uppercase text-sm font-bold hover:bg-black hover:text-[#FFFF8D] transition-colors rounded-full w-fit"
-              >
-                LEJ EN MASKINE
-              </Link>
+              {data.button.label && (
+                <Button
+                  button={data.button}
+                  cls="inline-block border border-black uppercase text-sm font-bold text-black rounded-full"
+                />
+              )}
             </div>
 
             {/* Empty div to balance layout on desktop */}

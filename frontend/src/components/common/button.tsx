@@ -8,8 +8,10 @@ const Button = ({ button, cls = "" }: { button: IButton; cls?: string }) => {
   const btnType =
     button.btnType === ButtonType.OUTLINE
       ? "border border-solid border-white text-white"
-      : "bg-primary text-black";
-  if (button.type === LinkType.External) {
+      : button.btnType === ButtonType.SOLID
+      ? "bg-primary text-black"
+      : "bg-transparent";
+  if (button.type === LinkType.EXTERNAL) {
     return (
       <a
         target="_blank"

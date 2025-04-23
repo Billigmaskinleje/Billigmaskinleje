@@ -9,7 +9,7 @@ export interface IImage {
 
 export enum LinkType {
   INTERNAL = "internal",
-  External = "external",
+  EXTERNAL = "external",
 }
 export enum ButtonType {
   SOLID = "solid",
