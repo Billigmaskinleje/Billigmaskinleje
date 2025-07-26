@@ -7,6 +7,7 @@ import EquipmentRental from "@/components/home/equipmentCategories";
 import PricingTable from "@/components/home/PricingTable";
 import FaqSection from "@/components/home/FaqSection";
 import PaymentSection from "@/components/home/PaymentSection";
+import CustomerReviews from "@/components/home/Reviews";
 
 export async function generateMetadata() {
   const data = await getHomePage();
@@ -34,6 +35,7 @@ export default async function Home() {
       <EquipmentRental data={data.equipmentCategories} />
       <EquipmentSteps data={data.projectSteps} />
       <PricingTable data={data.pricingExamples} />
+      <CustomerReviews />
       <FaqSection data={data.faq} />
       {/* Testimonial section */}
       <TestimonialSection data={data.testimonials} />

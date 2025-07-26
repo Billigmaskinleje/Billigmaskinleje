@@ -19,7 +19,7 @@ interface IHomeHeroProps {
 
 const Hero = ({ data }: IHomeHeroProps) => {
   return (
-    <section className="relative min-h-screen">
+    <section className="relative min-h-screen text-white">
       {/* Background Image with Gradient Overlay */}
       <div className="absolute inset-0 w-full h-full">
         {/* Image */}

@@ -20,14 +20,14 @@ export default function PricingTable({ data }: { data: IPricingTable }) {
   return (
     <div className="bg-[#1A1F22] min-h-screen flex flex-col items-center pt-16 md:pt-[226px] pb-12 md:pb-[165px] px-4">
       <div className="custom_container w-full">
-        <h1
+        <h2
           className={twMerge(
             "heading_secondary text-white font-black mb-10 md:mb-[143px] max-w-[1232px]",
             "lg:leading-[1.22]"
           )}
         >
           {data.title}
-        </h1>
+        </h2>
 
         {/* Mobile view - stacked tables */}
         <div className="md:hidden w-full flex flex-col gap-8">
